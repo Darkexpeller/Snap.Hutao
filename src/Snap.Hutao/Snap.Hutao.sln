@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32407.343
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snap.Hutao", "Snap.Hutao\Snap.Hutao.csproj", "{AAAB7CF0-F299-49B8-BDB4-4C320B3EC2C7}"
 EndProject
@@ -70,11 +70,11 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_AutoApplyExistingTranslations = False
-		RESX_NeutralResourcesLanguage = zh-CN
-		SolutionGuid = {E4449B1C-0E6A-4D19-955E-1CA491656ABA}
-		RESX_SortFileContentOnSave = True
-		RESX_ShowErrorsInErrorList = False
 		RESX_Rules = {"EnabledRules":["StringFormat","WhiteSpaceLead","WhiteSpaceTail","PunctuationLead"]}
+		RESX_ShowErrorsInErrorList = False
+		RESX_SortFileContentOnSave = True
+		SolutionGuid = {E4449B1C-0E6A-4D19-955E-1CA491656ABA}
+		RESX_NeutralResourcesLanguage = zh-CN
+		RESX_AutoApplyExistingTranslations = False
 	EndGlobalSection
 EndGlobal
