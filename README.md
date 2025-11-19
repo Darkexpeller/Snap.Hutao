@@ -19,7 +19,10 @@ Snap Hutao is an open-source Genshin Impact toolkit under MIT license, designed 
 
   
 
-## Problems
+## Updata
+
+###  2025-11-20-更换依赖包版本
+    Snap.Hutao.SourceGeneration包已更新，更换为1.3.14即可。不修改其他代码的情况下，加入SaltConstants.cs即可通过编译
 
 
 #### 2025-11-19-编译问题
