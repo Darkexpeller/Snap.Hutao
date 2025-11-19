@@ -1,6 +1,6 @@
 
 在最新SnapHutao存档中，使用VS进行编译会出现报错，原因为依赖包Snap.Hutao.SourceGeneration(Version=1.3.13)使用了原官方网站的接口：
-![[ffc066a4eb9a7afb3e55e955c30cf18a.png]]![[476b93c74749adc98e01334887a5c95f.png]]
+![[https://github.com/Darkexpeller/Snap.Hutao/tree/main/note/fixdll/ffc066a4eb9a7afb3e55e955c30cf18a.png]]![[https://github.com/Darkexpeller/Snap.Hutao/tree/main/note/fixdll/476b93c74749adc98e01334887a5c95f.png]]
 
 由于网站已经关停，因此该源生成器会产生报错，编译无法正常通过。
 
