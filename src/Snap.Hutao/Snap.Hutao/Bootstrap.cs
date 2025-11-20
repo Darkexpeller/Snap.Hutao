@@ -9,6 +9,7 @@ using Snap.Hutao.Win32;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Security.AccessControl;
+using System.Security.Principal;
 using WinRT;
 
 [assembly: DisableRuntimeMarshalling]
