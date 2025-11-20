@@ -32,6 +32,10 @@ public static partial class Bootstrap
     [STAThread]
     private static void Main(string[] args)
     {
+#if DEBUG
+        EnsureRunningAsAdmin();//please attach to the debugger after getting administrative privileges
+#endif
+
         if (Mutex.TryOpenExisting(LockName, out _))
         {
             return;
@@ -80,7 +84,7 @@ public static partial class Bootstrap
             SentrySdk.Flush();
         }
     }
-
+   
     private static void InitializeApp(ApplicationInitializationCallbackParams param)
     {
         Gen2GcCallback.Register(() =>
@@ -109,4 +113,34 @@ public static partial class Bootstrap
 
         return true;
     }
+#if DEBUG
+    public static void EnsureRunningAsAdmin()
+    {
+        WindowsIdentity identity = WindowsIdentity.GetCurrent();
+        WindowsPrincipal principal = new WindowsPrincipal(identity);
+
+        // ret if admin
+        if (principal.IsInRole(WindowsBuiltInRole.Administrator))
+        {
+            while (! Debugger.IsAttached)//finsh after attached to the debugger 
+            {
+                Thread.Sleep(1000);
+            }
+
+             return;
+        }
+
+        ProcessStartInfo psi = new ProcessStartInfo
+        {
+            FileName = Environment.ProcessPath,
+            UseShellExecute = true,
+            Verb = "runas",  
+            Arguments = string.Join(" ", Environment.GetCommandLineArgs(), 1, Environment.GetCommandLineArgs().Length - 1)
+        };
+
+        Process.Start(psi);
+
+        Environment.Exit(0);
+    }
+#endif
 }
